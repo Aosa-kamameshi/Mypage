@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aosaのホームページ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+</head>
+<body>
+  <div class="page-loader">
+    <div class="loader-shape"></div>
+  </div>
+
+  <header class="header">
+    <div class="header-content">
+      <h1 class="site-title">Aosaのホームページ</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#history">経歴</a></li>
+          <li><a href="#skills">スキル</a></li>
+          <li><a href="#projects">プロジェクト</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h2 class="hero-title">AOSA</h2>
+        <p class="subtitle">Portfolio</p>
+      </div>
+      
+      <!-- PowerPoint風の図形アニメーション -->
+      <div class="shape-container">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape triangle"></div>
+        <div class="shape rectangle"></div>
+        <div class="shape diamond"></div>
+        <div class="shape circle small"></div>
+        <div class="shape square small"></div>
+        <div class="shape triangle small"></div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>スクロールして続きを見る</span>
+        <div class="arrow-down"></div>
+      </div>
+    </section>
+
+    <section id="profile" class="section">
+      <div class="section-header">
+        <div class="shape-accent square"></div>
+        <h2 class="section-title">プロフィール</h2>
+      </div>
+      
+      <div class="container">
+        <div class="profile-content">
+          <div class="profile-image">
+            <div class="image-placeholder">
+              <div class="shape-overlay circle"></div>
+            </div>
+          </div>
+          <div class="profile-text">
+            <h3>AosaKamameshi</h3>
+            <p class="profile-description">高専生</p>
+            <div class="profile-details">
+              <p>ここにプロフィールの詳細を追加できます。あなたの興味や専門分野、目標などについて書くことができます。</p>
+              <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shape-container background">
+        <div class="shape circle bg"></div>
+        <div class="shape square bg"></div>
+        <div class="shape triangle bg"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-header">
+        <div class="shape-accent circle"></div>
+        <h2 class="section-title">自己紹介</h2>
+      </div>
+      
+      <div class="container">
+        <div class="content-box">
+          <p>ここに自己紹介文を追加できます。あなたの経歴、興味、専門分野などについて詳しく説明することができます。</p>
+          <p>複数の段落を使って、あなた自身についてより詳しく伝えることができます。読者があなたのことをよく理解できるような内容を書きましょう。</p>
+        </div>
+      </div>
+      
+      <div class="shape-container background">
+        <div class="shape rectangle bg"></div>
+        <div class="shape diamond bg"></div>
+      </div>
+    </section>
+
+    <section id="history" class="section">
+      <div class="section-header">
+        <div class="shape-accent triangle"></div>
+        <h2 class="section-title">経歴</h2>
+      </div>
+      
+      <div class="container">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="shape-accent small"></div>
+              <h3>20XX年 - 現在</h3>
+              <p>○○高等専門学校 ○○学科</p>
+              <p>詳細な説明をここに追加できます。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="shape-accent small"></div>
+              <h3>20XX年 - 20XX年</h3>
+              <p>過去の経歴</p>
+              <p>詳細な説明をここに追加できます。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="shape-accent small"></div>
+              <h3>20XX年</h3>
+              <p>過去の経歴</p>
+              <p>詳細な説明をここに追加できます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shape-container background">
+        <div class="shape circle bg"></div>
+        <div class="shape square bg"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-header">
+        <div class="shape-accent diamond"></div>
+        <h2 class="section-title">スキル</h2>
+      </div>
+      
+      <div class="container">
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>プログラミング言語</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">Python</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>フレームワーク・ツール</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-name">React</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">Node.js</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">Git</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shape-container background">
+        <div class="shape triangle bg"></div>
+        <div class="shape rectangle bg"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-header">
+        <div class="shape-accent rectangle"></div>
+        <h2 class="section-title">プロジェクト</h2>
+      </div>
+      
+      <div class="container">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="shape-overlay square"></div>
+            </div>
+            <div class="project-info">
+              <h3>プロジェクト名 1</h3>
+              <p>プロジェクトの説明をここに追加できます。使用した技術やプロジェクトの目的などについて書くことができます。</p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="#" class="project-link">詳細を見る</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <div class="shape-overlay circle"></div>
+            </div>
+            <div class="project-info">
+              <h3>プロジェクト名 2</h3>
+              <p>プロジェクトの説明をここに追加できます。使用した技術やプロジェクトの目的などについて書くことができます。</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+              <a href="#" class="project-link">詳細を見る</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <div class="shape-overlay triangle"></div>
+            </div>
+            <div class="project-info">
+              <h3>プロジェクト名 3</h3>
+              <p>プロジェクトの説明をここに追加できます。使用した技術やプロジェクトの目的などについて書くことができます。</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Django</span>
+                <span>PostgreSQL</span>
+              </div>
+              <a href="#" class="project-link">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shape-container background">
+        <div class="shape diamond bg"></div>
+        <div class="shape circle bg"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Aosa. All Rights Reserved.</p>
+    </div>
+    <div class="shape-container">
+      <div class="shape square small"></div>
+      <div class="shape circle small"></div>
+      <div class="shape triangle small"></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
