@@ -136,3 +136,20 @@ projectCards.forEach(card => {
 window.addEventListener('resize', () => {
   // 必要に応じてレイアウトを調整
 });
+
+// 画像の読み込みエラーを検出する関数
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("img")
+
+  images.forEach((img) => {
+    img.addEventListener("error", function () {
+      console.error("画像の読み込みに失敗しました:", this.src)
+      // エラーが発生した画像に代替スタイルを適用
+      this.style.padding = "10px"
+      this.style.border = "1px solid #ddd"
+      this.style.backgroundColor = "#f8f8f8"
+      this.style.minHeight = "150px"
+      this.style.minWidth = "150px"
+    })
+  })
+})
