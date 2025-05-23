@@ -145,11 +145,38 @@ document.addEventListener("DOMContentLoaded", () => {
     img.addEventListener("error", function () {
       console.error("画像の読み込みに失敗しました:", this.src)
       // エラーが発生した画像に代替スタイルを適用
-      this.style.padding = "10px"
-      this.style.border = "1px solid #ddd"
-      this.style.backgroundColor = "#f8f8f8"
-      this.style.minHeight = "150px"
-      this.style.minWidth = "150px"
+      this.style.padding = "20px"
+      this.style.border = "2px solid #ddd"
+      this.style.backgroundColor = "#f0f0f0"
+      this.style.minHeight = "200px"
+      this.style.minWidth = "200px"
+      this.style.display = "flex"
+      this.style.alignItems = "center"
+      this.style.justifyContent = "center"
+      this.style.fontSize = "14px"
+      this.style.color = "#666"
+      this.style.textAlign = "center"
+      this.style.borderRadius = "5px"
+      
+      // 代替テキストを表示
+      this.alt = "画像を読み込めませんでした"
+      this.title = "画像ファイル: " + this.src
+      
+      // 親要素にも最小サイズを設定
+      if (this.parentElement && this.parentElement.classList.contains('image-placeholder')) {
+        this.parentElement.style.minHeight = "200px"
+        this.parentElement.style.display = "flex"
+        this.parentElement.style.alignItems = "center"
+        this.parentElement.style.justifyContent = "center"
+        this.parentElement.style.backgroundColor = "#f8f8f8"
+        this.parentElement.style.border = "1px dashed #ccc"
+        this.parentElement.style.borderRadius = "5px"
+      }
+    })
+    
+    // 画像が正常に読み込まれた場合のログ
+    img.addEventListener("load", function () {
+      console.log("画像が正常に読み込まれました:", this.src)
     })
   })
 })

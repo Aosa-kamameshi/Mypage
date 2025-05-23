@@ -599,6 +599,7 @@ ul {
 }
 
 /* モバイル対応 (768px以下) - 画像を上に配置 */
+/* モバイル対応 (768px以下) - 画像を上に配置 */
 @media (max-width: 768px) {
     .profile-content {
         flex-direction: column;
