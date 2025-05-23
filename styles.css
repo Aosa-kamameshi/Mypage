@@ -505,52 +505,29 @@ ul {
 
 /* プロフィールセクション */
 .profile-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  max-width: 900px;
-  margin: 0 auto;
-  animation: fade-in 1s ease;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fade-in 1s ease;
 }
 
 .profile-image {
-  flex: 1;
-  position: relative;
+    flex: 1;
+    position: relative;
 }
 
 .image-placeholder {
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
 .overlay-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-}
-
-/* レスポンシブ画像のための追加スタイル */
-.responsive-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-}
-
-/* モバイル対応のメディアクエリ */
-@media screen and (max-width: 768px) {
-  .responsive-image {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -558,26 +535,92 @@ ul {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
-  }
+}
+
+/* レスポンシブ画像のための追加スタイル */
+.responsive-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
 .profile-text {
-  flex: 2;
+    flex: 2;
 }
 
 .profile-text h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .profile-description {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
 }
 
 .profile-details {
-  margin-top: 20px;
+    margin-top: 20px;
+}
+
+/* モバイル対応のメディアクエリ */
+@media screen and (max-width: 768px) {
+    .profile-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        text-align: center !important;
+    }
+    
+    .profile-image {
+        flex: none !important;
+        order: 1 !important; /* 画像を最初に配置 */
+        max-width: 250px !important;
+        margin: 0 auto !important;
+    }
+    
+    .profile-text {
+        flex: none !important;
+        order: 2 !important; /* テキストを画像の後に配置 */
+    }
+
+    .profile-text h3 {
+        font-size: 1.8rem !important;
+        margin-top: 0 !important;
+    }
+
+    .container {
+        padding: 10px !important;
+    }
+
+    .social-link {
+        display: block !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+    }
+}
+
+/* より小さい画面サイズ用の追加メディアクエリ */
+@media screen and (max-width: 480px) {
+    .profile-content {
+        gap: 20px !important;
+    }
+    
+    .profile-image {
+        max-width: 200px !important;
+    }
+    
+    .profile-text h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .profile-description {
+        font-size: 1rem !important;
+    }
 }
 
 .social-links {
