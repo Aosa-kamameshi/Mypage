@@ -504,6 +504,10 @@ ul {
 }
 
 /* プロフィールセクション */
+/* プロフィールセクションのモバイル対応修正版 */
+/* 既存のスタイルを置き換えて、以下をstyles.cssの該当部分に適用してください */
+
+/* プロフィールセクション - デスクトップ */
 .profile-content {
     display: flex;
     align-items: center;
@@ -527,17 +531,6 @@ ul {
     overflow: hidden;
 }
 
-.overlay-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-
-/* レスポンシブ画像のための追加スタイル */
 .responsive-image {
     position: absolute;
     top: 50%;
@@ -567,59 +560,114 @@ ul {
     margin-top: 20px;
 }
 
-/* モバイル対応のメディアクエリ */
-@media screen and (max-width: 768px) {
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.social-link:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+/* タブレット対応 (992px以下) */
+@media (max-width: 992px) {
     .profile-content {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 30px !important;
-        text-align: center !important;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
     }
     
     .profile-image {
-        flex: none !important;
-        order: 1 !important; /* 画像を最初に配置 */
-        max-width: 250px !important;
-        margin: 0 auto !important;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
     .profile-text {
-        flex: none !important;
-        order: 2 !important; /* テキストを画像の後に配置 */
-    }
-
-    .profile-text h3 {
-        font-size: 1.8rem !important;
-        margin-top: 0 !important;
-    }
-
-    .container {
-        padding: 10px !important;
-    }
-
-    .social-link {
-        display: block !important;
-        margin: 8px 0 !important;
-        text-align: center !important;
+        flex: none;
     }
 }
 
-/* より小さい画面サイズ用の追加メディアクエリ */
-@media screen and (max-width: 480px) {
+/* モバイル対応 (768px以下) - 画像を上に配置 */
+@media (max-width: 768px) {
     .profile-content {
-        gap: 20px !important;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    /* 画像を最上部に配置 */
+    .profile-image {
+        order: -1; /* flexboxで順序を変更して画像を最初に */
+        flex: none;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    /* テキスト部分を画像の下に配置 */
+    .profile-text {
+        order: 1;
+        flex: none;
+    }
+
+    .profile-text h3 {
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+
+    .profile-description {
+        font-size: 1.1rem;
+    }
+
+    /* ソーシャルリンクをモバイル用に調整 */
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .social-link {
+        min-width: 80px;
+        text-align: center;
+    }
+}
+
+/* 小さなモバイル画面 (480px以下) */
+@media (max-width: 480px) {
+    .profile-content {
+        gap: 20px;
     }
     
     .profile-image {
-        max-width: 200px !important;
+        max-width: 200px;
     }
     
     .profile-text h3 {
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
     }
     
     .profile-description {
-        font-size: 1rem !important;
+        font-size: 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .social-link {
+        width: 120px;
     }
 }
 
