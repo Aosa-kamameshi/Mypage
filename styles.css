@@ -503,10 +503,6 @@ ul {
   background-color: var(--primary-color);
 }
 
-/* プロフィールセクション */
-/* プロフィールセクションのモバイル対応修正版 */
-/* 既存のスタイルを置き換えて、以下をstyles.cssの該当部分に適用してください */
-
 /* プロフィールセクション - デスクトップ */
 .profile-content {
     display: flex;
@@ -590,7 +586,18 @@ ul {
     
     .profile-image {
         max-width: 300px;
+        width: 200px;
         margin: 0 auto;
+    }
+
+    .responsive-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
     }
     
     .profile-text {
@@ -612,7 +619,18 @@ ul {
         order: -1; /* flexboxで順序を変更して画像を最初に */
         flex: none;
         max-width: 250px;
+        width: 200px;
         margin: 0 auto;
+    }
+
+    .responsive-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
     }
     
     /* テキスト部分を画像の下に配置 */
@@ -651,8 +669,19 @@ ul {
     
     .profile-image {
         max-width: 200px;
+        width: 200px;
     }
-    
+
+    .responsive-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+    }
+
     .profile-text h3 {
         font-size: 1.5rem;
     }
